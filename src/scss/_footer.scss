@@ -1,0 +1,69 @@
+.b-footer {
+  //fallback
+  background-color: #484e38;
+  background-image: url("../images/footer-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  line-height: lh(16px, 40px);
+  color: $footer-color;
+
+  &__col {
+    margin-bottom: 40px;
+    &--contacts {
+    }
+  }
+
+  &__title {
+    color: $footer-color;
+    margin-bottom: 8px;
+    &--nav {
+      color: $white;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__divider {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border-top: 1px solid #979797;
+    display: block;
+
+    &--small {
+      margin-top: 60px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__text {
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  &__link,
+  &__addr,
+  &__link-mail {
+    color: $white;
+  }
+
+  &__link-mail {
+    word-break: break-all;
+    line-height: 1.6;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__nav-link {
+    display: block;
+    color: $footer-color;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 310px;
+    padding-bottom: 30px;
+  }
+}

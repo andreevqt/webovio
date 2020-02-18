@@ -1,0 +1,33 @@
+%button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+
+:focus,
+button:focus {
+  outline: none;
+}
+
+body {
+  background-color: lightgray;
+}
+
+.container-xl {
+  padding-left: $grid-gutter-width  / 2;
+  padding-right: $grid-gutter-width  / 2;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1140px;
+}
+
+.b-link {
+}
+
+.mobile-menu-is-shown {
+  overflow: hidden;
+  .b-mobile-menu {
+    transform: translateX(0);
+  }
+}

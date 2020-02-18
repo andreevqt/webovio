@@ -1,0 +1,93 @@
+@mixin make-toggle(
+  $bg: $toggle-bg,
+  $padding: $toggle-padding,
+  $color: $toggle-color,
+  $width: $toggle-width,
+  $height: $toggle-height,
+  $inner-height: $toggle-inner-height,
+  ) {
+
+  $parent: &;
+  $dy: ($height - $padding * 2 - $inner-height) / 2;
+  position: relative;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: $bg;
+  padding: $padding;
+  width: $width;
+  height: $height;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &__inner {
+    top: calc(50% - #{$inner-height} / 2);
+    left: $padding;
+    right: $padding;
+    opacity: 1;
+    transition: opacity 0.5s linear, transform 0.3s linear;
+  }
+
+  &__inner,
+  &::before,
+  &::after {
+    background-color: $color;
+    position: absolute;
+    height: $inner-height;
+    right: $padding;
+    left: $padding;
+    border-radius: 100px;
+  }
+
+  &::before,
+  &::after {
+    transition: transform 0.2s ease-out;
+  }
+
+  &::before {
+    content: "";
+    top: $padding;
+  }
+
+  &::after {
+    content: "";
+    bottom: $padding;
+  }
+
+  &--cross {
+    &::before {
+      transform: translateY($dy) rotate(-45deg);
+    }
+
+    #{$parent}__inner {
+      display: none;
+    }
+
+    &::after {
+      transform: translateY(-$dy) rotate(45deg);
+    }
+  }
+}
+
+.toggle {
+  @include make-toggle();
+}
+
+.mobile-menu-is-shown {
+  /* .toggle__inner {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  $dy: ($toggle-height - $toggle-padding * 2 - $toggle-inner-height) / 2;
+
+  .toggle::before {
+    transform: translateY($dy) rotate(-45deg);
+  }
+
+  .toggle::after {
+    transform: translateY(-$dy) rotate(45deg);
+  } */
+}

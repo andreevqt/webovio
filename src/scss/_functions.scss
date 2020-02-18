@@ -1,0 +1,9 @@
+@function calculateRem($size, $base) {
+  $remSize: $size / $base;
+  @return #{$remSize}rem;
+}
+
+@function lh($size, $lh) {
+  @return $lh / $size;
+}
+
