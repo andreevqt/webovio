@@ -24,6 +24,14 @@ $font-sizes: (
   "18": 18px
 );
 
+$sizes: (
+  "0" : 0,
+  "20": 20px,
+  "30": 30px,
+  "40": 40px,
+  "60": 60px
+);
+
 $body-color: rgba(#213842, 0.6);
 $font-family-base: "Poppins", sans-serif, $font-family-base;
 
@@ -32,8 +40,6 @@ $font-size-base: 1rem;
 
 $headings-font-family: "Poppins", sans-serif, $headings-font-family;
 $headings-color: #4d533c;
-
-
 
 $link-color:                              $yellow;
 $link-decoration:                         none;
