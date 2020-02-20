@@ -67,10 +67,16 @@
     font-weight: 700;
   }
 
+  &__nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
   &__nav-link {
-    display: block;
-    float: left;
-    clear: left;
+    display: inline-block;
     color: $footer-color;
   }
 

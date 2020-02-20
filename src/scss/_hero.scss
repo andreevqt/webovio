@@ -1,0 +1,42 @@
+.b-hero {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  padding-top: 100px;
+  padding-bottom: 60px;
+
+  color: $white;
+
+  &__meta {
+    display: inline-block;
+  }
+
+  &__title,
+  &__meta {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    color: $white;
+  }
+
+  &__meta {
+
+  }
+
+  &__link {
+    font-weight: 700;
+  }
+
+
+  &__description {
+    margin-bottom: 45px;
+  }
+
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 190px;
+    padding-bottom: 190px;
+  }
+}

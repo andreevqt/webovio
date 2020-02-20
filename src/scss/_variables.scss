@@ -19,6 +19,7 @@ $container-max-widths: (
 );
 
 $font-sizes: (
+  "60": 60px,
   "40": 40px,
   "20": 20px,
   "18": 18px
@@ -39,7 +40,10 @@ $line-height-base:            1.6;
 $font-size-base: 1rem;
 
 $headings-font-family: "Poppins", sans-serif, $headings-font-family;
+$headings-font-weight: 700;
 $headings-color: #4d533c;
+
+$h1-font-size: rem(60, 16);
 
 $link-color:                              $yellow;
 $link-decoration:                         none;
