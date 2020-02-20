@@ -1,0 +1,11 @@
+.b-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  &--slider {
+    @include media-breakpoint-up(lg) {
+      margin-top: -100px;
+    }
+  }
+  &__title {
+  }
+}
