@@ -1,0 +1,70 @@
+.testimonial {
+  $parent: &;
+  padding: 60px 40px 60px 40px;
+  box-shadow: 0px 100px 100px rgba(0, 0, 0, 0.145947);
+
+  &__profile {
+    padding-left: 130px;
+    position: relative;
+    min-height: 90px;
+  }
+
+  &__profile-inner {
+    padding-top: 15px;
+  }
+
+  &__role,
+  &__content {
+    color: #152934;
+  }
+
+  &__content {
+    font-style: italic;
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+
+  &__avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    box-shadow: 20px 25px 43px rgba($black, 0.18);
+    position: absolute;
+    left: 0;
+  }
+
+  &__name {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: $headings-color;
+  }
+
+  &--small {
+    background-color: $white;
+    /* max-width: 453px; */
+    padding: 30px;
+    box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.15);
+    #{$parent}__profile {
+      padding-left: 61px;
+      min-height: auto;
+    }
+    #{$parent}__profile-inner {
+      padding-top: 0;
+    }
+    #{$parent}__avatar {
+      width: 46px;
+      height: 46px;
+    }
+    #{$parent}__content,
+    #{$parent}__name {
+      font-size: 16px;
+    }
+    #{$parent}__content {
+      margin-bottom: 25px;
+    }
+    #{$parent}__role {
+      font-size: 14px;
+    }
+  }
+}
