@@ -1,4 +1,6 @@
 .b-clients-slider-container {
+  position: relative;
+  z-index: 1;
   background-color: #fbfbfb;
   box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.15);
   width: 100vw;
