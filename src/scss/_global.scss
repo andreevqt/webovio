@@ -12,7 +12,28 @@ button:focus {
   outline: none;
 }
 
-body {
+.h-overflow-x-visible {
+  overflow-x: visible !important;
+}
+
+.h-overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+
+.h-overflow-x-auto {
+  overflow-x: auto !important;
+}
+
+.h-overflow-y-visible {
+  overflow-y: visible !important;
+}
+
+.h-overflow-y-hidden {
+  overflow-y: hidden !important;
+}
+
+.h-overflow-y-auto {
+  overflow-y: auto !important;
 }
 
 .b-link {
@@ -51,6 +72,12 @@ body {
 
   &--base {
     color: #d4d6d4;
+    &:hover {
+      color: $primary;
+      &::before {
+        border-left-color: $primary;
+      }
+    }
     &::before {
       border-left-color: #d4d6d4;
     }
@@ -65,5 +92,7 @@ body {
 }
 
 .content-wrapper {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  position: relative;
+  z-index: 2;
 }

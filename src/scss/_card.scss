@@ -1,0 +1,17 @@
+.b-card {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    padding: 30px 30px 0 30px;
+  }
+
+  &__footer {
+    padding: 0 30px 30px 30px;
+  }
+
+  &__body {
+    padding: 30px;
+    flex: 1 1 auto
+  }
+}

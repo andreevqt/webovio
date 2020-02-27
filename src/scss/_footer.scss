@@ -36,10 +36,6 @@
     border-top: 1px solid #979797;
     display: block;
 
-    /* &--small {
-      margin-bottom: 30px;
-    } */
-
     @include media-breakpoint-up(md) {
       margin-top: 60px;
       margin-bottom: 60px;

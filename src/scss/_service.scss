@@ -1,0 +1,12 @@
+.b-service {
+  height: 100%;
+  &__title {
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  &__content {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+}
