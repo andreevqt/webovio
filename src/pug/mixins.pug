@@ -1,0 +1,3 @@
+mixin use(id, width, height, fill, stroke)
+  svg(class!=attributes.class, width=width, height=height, fill=fill, stroke=stroke)
+    use(xlink:href!=id)
