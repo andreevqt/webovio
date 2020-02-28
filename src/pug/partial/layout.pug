@@ -1,9 +1,11 @@
+include ../mixins
 block variables
 doctype html
 html(lang="en")
   head
     include head
   body
+    include ../../../images/sprite.svg
     include header
     main.content-wrapper
       block content

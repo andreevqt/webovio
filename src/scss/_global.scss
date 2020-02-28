@@ -12,6 +12,18 @@ button:focus {
   outline: none;
 }
 
+svg {
+  overflow: hidden;
+}
+
+#svgSprite {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
 .h-overflow-x-visible {
   overflow-x: visible !important;
 }
@@ -92,7 +104,7 @@ button:focus {
 }
 
 .content-wrapper {
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   position: relative;
   z-index: 2;
 }

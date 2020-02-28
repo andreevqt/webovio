@@ -1,3 +1,4 @@
 module.exports = {
-  useWebpack: true
-}
+  useWebpack: true,
+  svgSprites: true
+}  

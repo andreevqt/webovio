@@ -61,6 +61,7 @@
     line-height: 1.6;
     font-size: 24px;
     font-weight: 700;
+    margin-bottom: 24px;
   }
 
   &__nav {
@@ -74,6 +75,33 @@
   &__nav-link {
     display: inline-block;
     color: $footer-color;
+  }
+
+  &__social-link {
+    background-color: #444a34;
+    border-radius: 50%;
+    color: #5e6648;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    margin-right: 10px;
+    &:hover {
+      color: $white;
+      background-color: $primary;
+    }
+  }
+
+  &__social-icon {
+    /* height: 18px;
+    width: 12px; */
+  }
+
+  &--mt {
+    @include media-breakpoint-up(md) {
+      margin-top: -220px;
+    }
   }
 
   @include media-breakpoint-up(lg) {

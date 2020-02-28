@@ -4494,6 +4494,18 @@ button:focus {
   outline: none;
 }
 
+svg {
+  overflow: hidden;
+}
+
+#svgSprite {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
 .h-overflow-x-visible {
   overflow-x: visible !important;
 }
@@ -4577,7 +4589,7 @@ button:focus {
 }
 
 .content-wrapper {
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   position: relative;
   z-index: 2;
 }
@@ -4660,6 +4672,7 @@ button:focus {
 .b-header {
   padding: 24px 0;
   position: absolute;
+  z-index: 3;
   top: 0;
   left: 0;
   right: 0;
@@ -4696,7 +4709,7 @@ button:focus {
   padding-top: 60px;
   background-color: #fff;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   left: 0;
   right: 0;
@@ -4777,6 +4790,7 @@ button:focus {
   line-height: 1.6;
   font-size: 24px;
   font-weight: 700;
+  margin-bottom: 24px;
 }
 
 .b-footer__nav {
@@ -4792,6 +4806,34 @@ button:focus {
   color: #b6c197;
 }
 
+.b-footer__social-link {
+  background-color: #444a34;
+  border-radius: 50%;
+  color: #5e6648;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.b-footer__social-link:hover {
+  color: #fff;
+  background-color: #ffd723;
+}
+
+.b-footer__social-icon {
+  /* height: 18px;
+    width: 12px; */
+}
+
+@media (min-width: 768px) {
+  .b-footer--mt {
+    margin-top: -220px;
+  }
+}
+
 @media (min-width: 992px) {
   .b-footer {
     padding-top: 310px;
@@ -4802,7 +4844,7 @@ button:focus {
 .b-section {
   padding-top: 60px;
   padding-bottom: 60px;
-  overflow-x: hidden;
+  /*   overflow-x: hidden; */
 }
 
 .b-section__left-col {
@@ -4884,7 +4926,7 @@ button:focus {
 }
 
 .b-section--services .b-section__container {
-  margin-bottom: -60px;
+  /* margin-bottom: -60px; */
   position: relative;
 }
 

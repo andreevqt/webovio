@@ -1,4 +1,4 @@
-footer.b-footer
+footer.b-footer.b-footer--mt
   .container-xl
     .row
       .b-footer__col.col-sm-4.col-lg-3
@@ -51,7 +51,7 @@ footer.b-footer
           li.b-footer__nav-item
             a.b-footer__nav-link(href="#").
               Privacy Policy
-          
+
       .b-footer__col.col-sm-4.col-lg-3.col-xl-2
         .b-footer__title.b-footer__title--nav.
           Company
@@ -76,11 +76,23 @@ footer.b-footer
           Feel free to get in touch with us <br> via email
         a.b-footer__link-mail.b-link.b-link--mail(href="mailto:info.webovio@gmail.com").
           info.webovio@gmail.com
-      
-    .b-footer__divider.b-footer__divider--small
-      
-        
+        .b-footer__socials
+          a.b-footer__social-link(href="#")
+            +use("#facebook", 12, 18)(class="b-footer__social-icon")
+          a.b-footer__social-link(href="#")
+            +use("#twitter", 18, 18)(class="b-footer__social-icon")
+          a.b-footer__social-link(href="#")
+            +use("#google", 18, 18)(class="b-footer__social-icon")
+          a.b-footer__social-link(href="#")
+            +use("#linkedin", 18, 18)(class="b-footer__social-icon")
 
-     
-            
-      
+    .b-footer__divider
+
+      .row
+        .b-footer__col.col-sm-6
+          a.b-footer__logo(href="#")
+            img(src="images/logo.png", alt)
+
+
+
+
