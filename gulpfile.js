@@ -122,9 +122,12 @@ const js = () => {
 
 const images = () => {
   const dest = config.dist + "/images";
-  return gulp
+  const images = gulp
     .src(["./images/**/*", "!./images/**/*.gitignore"])
     .pipe(gulp.dest(dest));
+  const icon = gulp.src("./favicon.png")
+    .pipe(gulp.dest(config.dist));
+  return merge(images, icon);
 }
 
 const vendor = () => {

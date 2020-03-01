@@ -33,3 +33,37 @@
     }
   }
 }
+
+.h-overflow-x-visible {
+  overflow-x: visible !important;
+}
+
+.h-overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+
+.h-overflow-x-auto {
+  overflow-x: auto !important;
+}
+
+.h-overflow-y-visible {
+  overflow-y: visible !important;
+}
+
+.h-overflow-y-hidden {
+  overflow-y: hidden !important;
+}
+
+.h-overflow-y-auto {
+  overflow-y: auto !important;
+}
+
+.h-d-flex  {
+  display: flex !important;
+}
+
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

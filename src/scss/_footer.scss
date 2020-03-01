@@ -14,8 +14,13 @@
     margin-bottom: 20px;
     clear: both;
 
+    &--copy {
+      margin-left: auto;
+    }
+
     @include media-breakpoint-up(md) {
-      margin-bottom: 40px;
+      margin-bottom: 0;
+      // margin-bottom: 40px;
     }
   }
 
@@ -93,9 +98,12 @@
     }
   }
 
-  &__social-icon {
-    /* height: 18px;
-    width: 12px; */
+  &__copy {
+    font-size: 14px;
+  }
+
+  &__bottom {
+    // @extend %flex-center;
   }
 
   &--mt {

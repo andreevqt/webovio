@@ -7,6 +7,14 @@
   display: inline-block;
 }
 
+%list {
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
 :focus,
 button:focus {
   outline: none;
@@ -14,6 +22,10 @@ button:focus {
 
 svg {
   overflow: hidden;
+}
+
+body {
+  position: relative;
 }
 
 #svgSprite {
@@ -24,29 +36,6 @@ svg {
   height: 0;
 }
 
-.h-overflow-x-visible {
-  overflow-x: visible !important;
-}
-
-.h-overflow-x-hidden {
-  overflow-x: hidden !important;
-}
-
-.h-overflow-x-auto {
-  overflow-x: auto !important;
-}
-
-.h-overflow-y-visible {
-  overflow-y: visible !important;
-}
-
-.h-overflow-y-hidden {
-  overflow-y: hidden !important;
-}
-
-.h-overflow-y-auto {
-  overflow-y: auto !important;
-}
 
 .b-link {
   display: inline-block;
@@ -104,6 +93,7 @@ svg {
 }
 
 .content-wrapper {
+  min-width: 0;
   overflow-x: hidden;
   position: relative;
   z-index: 2;

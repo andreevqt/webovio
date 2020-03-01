@@ -1,6 +1,6 @@
 .b-mobile-menu {
-  padding-top: 60px;
-  background-color: $white;
+  padding: 60px 30px 30px 30px;
+  background-color: #484e38;
   position: fixed;
   z-index: 3;
   top: 0;
@@ -15,19 +15,46 @@
     position: absolute;
     right: 20px;
     top: 20px;
+    .toggle {
+      &::after,
+      &::before {
+        background-color: $white;
+      }
+    }
   }
 
   &__menu {
-    
+    margin-top: 60px;
+    @extend %list;
+    align-items: center;
   }
 
   &__item {
-
-
   }
 
   &__link {
-
+    position: relative;
+    display: inline-block;
+    padding: 5px 0;
+    color: $white;
+    font-size: 18px;
+    transition: color 0.3s linear;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      min-width: 0;
+      background-color: $primary;
+      transition: min-width 0.3s linear;
+    }
+    &:hover {
+      color: $primary;
+      &::before {
+        min-width:  70%;
+      }
+    }
   }
 
-}
+} 
