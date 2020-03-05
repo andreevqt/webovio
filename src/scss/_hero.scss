@@ -2,7 +2,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  
+
   padding-top: 120px;
   padding-bottom: 60px;
 
@@ -22,18 +22,18 @@
   }
 
   &__meta {
-
   }
 
   &__link {
     font-weight: 700;
   }
 
-
   &__description {
-    margin-bottom: 45px;
+    margin-bottom: 15px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 45px;
+    }
   }
-
 
   @include media-breakpoint-up(lg) {
     padding-top: 190px;

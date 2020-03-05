@@ -2,9 +2,10 @@
   $parent: &;
   padding-top: 60px;
   padding-bottom: 60px;
-  
+
   &__left-col {
-    margin-bottom: 40px;
+
+    margin-bottom: 15px;
     @include media-breakpoint-up(md) {
       margin-bottom: 0;
     }
@@ -65,7 +66,7 @@
   &--projects {
     #{$parent}__right-col {
       @include media-breakpoint-up(lg) {
-      padding-left: 120px;
+        padding-left: 120px;
       }
     }
   }
@@ -75,7 +76,7 @@
     #{$parent}__container {
       position: relative;
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         right: 0;
         top: 0;
@@ -93,11 +94,17 @@
   }
 
   &__title {
-    margin-bottom: 35px;
+    margin-bottom: 15px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 35px;
+    }
   }
 
   &__description {
-    margin-bottom: 40px;
+    margin-bottom: 15px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 40px;
+    }
   }
 
   @include media-breakpoint-up(lg) {
