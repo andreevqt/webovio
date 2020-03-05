@@ -10,7 +10,8 @@
     "images": "gulp images",
     "sprites": "gulp sprites",
     "zip": "gulp zip",
-    "watch": "gulp watch --mode=development"
+    "watch": "gulp watch --mode=development",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
