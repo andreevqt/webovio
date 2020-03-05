@@ -11,7 +11,7 @@
     "sprites": "gulp sprites",
     "zip": "gulp zip",
     "watch": "gulp watch --mode=development",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gulp build --mode=production && gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
