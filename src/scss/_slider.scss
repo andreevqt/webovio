@@ -2,11 +2,11 @@
   position: relative;
   z-index: 1;
   background-color: #fbfbfb;
-  box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.15);
+  box-shadow: 50px 50px 100px rgba($black, 0.15);
   width: 100vw;
   &__inner {
     margin: 0;
-    padding: 60px 0 60px 65px;
+    padding: 60px $grid-gutter-width 60px 65px;
   }
 }
 

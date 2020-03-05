@@ -6,7 +6,6 @@ const uglify = require("gulp-uglify");
 const rename = require("gulp-rename");
 const pug = require("gulp-pug");
 const merge = require("merge-stream");
-const userConfig = require("./config");
 const del = require("del");
 const autoprefixer = require("gulp-autoprefixer");
 const browsersync = require("browser-sync").create();
@@ -23,22 +22,20 @@ const argv = require("yargs").argv;
 const fs = require("fs");
 const childProcess = require("child_process");
 
-const defaults = {
+const config = {
   // destination folder
   dist: "./dist",
   // if set to true - ignores minify js
-  useWebpack: false,
+  useWebpack: true,
   // Should compile css sprites ?
   pngSprites: false,
   // Should compile png sprites ?
-  svgSprites: false,
+  svgSprites: true,
   // Should minify Css?
   minifyCss: true,
   // Should minify Js?
   minifyJs: true
-}
-
-const config = { ...defaults, ...userConfig };
+};
 
 const empty = () => {
   const th = through.obj((file, enc, cb) => {
@@ -231,11 +228,9 @@ const svgSprites = () => {
 }
 
 const zip = () => {
-
   const hash = childProcess.execSync("git rev-parse HEAD")
     .toString().trim().substring(0, 7);
 
-  /* const date = moment().format(`YYYY-MM-DD-HH-SS-${hash}`); */
   return gulp
     .src(config.dist + '/**/*')
     .pipe(gulpZip(`${hash}.zip`))
