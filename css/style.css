@@ -4807,7 +4807,7 @@ body {
 }
 
 .b-footer__col {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   clear: both;
 }
 
@@ -4821,6 +4821,17 @@ body {
   }
 }
 
+.b-footer__logo img {
+  width: auto;
+  height: 20px;
+}
+
+@media (min-width: 768px) {
+  .b-footer__logo img {
+    height: 44px;
+  }
+}
+
 .b-footer__title {
   color: #b6c197;
   margin-bottom: 8px;
@@ -4830,7 +4841,13 @@ body {
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+  .b-footer__title--nav {
+    margin-bottom: 20px;
+  }
 }
 
 .b-footer__divider {
@@ -5020,13 +5037,7 @@ body {
 }
 
 .b-section__title, .b-project__title {
-  margin-bottom: 15px;
-}
-
-@media (min-width: 768px) {
-  .b-section__title, .b-project__title {
-    margin-bottom: 35px;
-  }
+  margin-bottom: 30px;
 }
 
 .b-section__description, .b-project__description {
@@ -5061,7 +5072,7 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 120px;
+  padding-top: 100px;
   padding-bottom: 60px;
   color: #fff;
 }
@@ -5071,7 +5082,7 @@ body {
 }
 
 .b-hero__title, .b-hero__meta {
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 
 .b-hero__title {
@@ -5083,7 +5094,7 @@ body {
 }
 
 .b-hero__description {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 @media (min-width: 768px) {
@@ -5194,7 +5205,7 @@ body {
 }
 
 .b-project__left-col, .b-project__right-col {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 @media (min-width: 768px) {
@@ -5254,7 +5265,7 @@ body {
 
 .b-service {
   height: 100%;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .b-service__title {
