@@ -3,7 +3,7 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  padding-top: 120px;
+  padding-top: 100px;
   padding-bottom: 60px;
 
   color: $white;
@@ -14,7 +14,7 @@
 
   &__title,
   &__meta {
-    margin-bottom: 24px;
+    margin-bottom: 30px;
   }
 
   &__title {
@@ -29,7 +29,7 @@
   }
 
   &__description {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     @include media-breakpoint-up(md) {
       margin-bottom: 45px;
     }

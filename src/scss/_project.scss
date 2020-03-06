@@ -33,7 +33,7 @@
 
   &__left-col,
   &__right-col {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     @include media-breakpoint-up(md) {
       margin-bottom: 100px;
     }

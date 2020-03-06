@@ -1,5 +1,6 @@
 .b-service {
   height: 100%;
+  margin-bottom: 30px;
   &__title {
     text-transform: uppercase;
     font-weight: 500;
@@ -12,7 +13,6 @@
       margin-bottom: 30px;
     }
   }
-  padding-bottom: 30px;
   @include media-breakpoint-up(md) {
     padding-bottom: 0;
   }

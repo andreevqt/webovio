@@ -11,7 +11,7 @@
   color: $footer-color;
 
   &__col {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     clear: both;
 
     &--copy {
@@ -20,7 +20,14 @@
 
     @include media-breakpoint-up(md) {
       margin-bottom: 0;
-      // margin-bottom: 40px;
+    }
+  }
+
+  &__logo img{
+    width: auto;
+    height: 20px;
+    @include media-breakpoint-up(md) {
+      height: 44px;
     }
   }
 
@@ -31,7 +38,10 @@
       color: $white;
       font-weight: 600;
       text-transform: uppercase;
-      margin-bottom: 20px;
+      margin-bottom: 8px;
+      @include media-breakpoint-up(md) {
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -100,10 +110,6 @@
 
   &__copy {
     font-size: 14px;
-  }
-
-  &__bottom {
-    // @extend %flex-center;
   }
 
   &--mt {
