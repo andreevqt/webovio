@@ -1,6 +1,7 @@
 .b-project {
   $parent: &;
   position: relative;
+  margin-bottom: 20px;
 
   &__title {
     @extend .b-section__title;
@@ -52,6 +53,10 @@
   }
 
   &--left {
+    flex-direction: column-reverse;
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+    }
     #{$parent}__header {
       @include media-breakpoint-up(md) {
         padding: 0 40px 40px 0;
