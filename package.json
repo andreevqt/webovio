@@ -17,6 +17,10 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
     "babel-loader": "^8.0.6",
@@ -34,17 +38,13 @@
     "gulp-uglify": "^3.0.2",
     "gulp-zip": "^5.0.1",
     "gulp.spritesmith": "^6.11.0",
-    "jquery": "^3.4.1",
     "merge-stream": "^2.0.0",
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "slick-carousel": "^1.8.1",
     "through2": "^3.0.1",
     "vinyl-buffer": "^1.0.1",
-    "webpack-stream": "^5.2.1"
-  },
-  "devDependencies": {
-    "bootstrap": "^4.4.1",
+    "webpack-stream": "^5.2.1",
     "gh-pages": "^2.2.0"
   }
 }
