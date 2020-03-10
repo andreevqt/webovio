@@ -5220,7 +5220,7 @@ body {
   .b-project__header {
     position: absolute;
     top: 0;
-    width: 50vw;
+    width: 55vw;
     height: 100%;
   }
 }
@@ -5239,6 +5239,34 @@ body {
   .b-project--left .b-project__header {
     padding: 0 40px 40px 0;
     right: 0;
+  }
+}
+
+.b-project--left .b-project__left-col {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .b-project--left .b-project__left-col {
+    flex: 0 0 55%;
+    max-width: 55%;
+  }
+}
+
+.b-project--left .b-project__right-col {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .b-project--left .b-project__right-col {
+    flex: 0 0 45%;
+    max-width: 45%;
   }
 }
 
@@ -5262,9 +5290,37 @@ body {
   }
 }
 
+.b-project--right .b-project__left-col {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .b-project--right .b-project__left-col {
+    flex: 0 0 45%;
+    max-width: 45%;
+  }
+}
+
 @media (min-width: 768px) {
   .b-project--right .b-project__left-col {
     padding: 80px 50px 120px 50px;
+  }
+}
+
+.b-project--right .b-project__right-col {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .b-project--right .b-project__right-col {
+    flex: 0 0 55%;
+    max-width: 55%;
   }
 }
 
