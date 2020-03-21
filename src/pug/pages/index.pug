@@ -4,7 +4,7 @@ block variables
   - var title = "Webovio"
 
 block content 
-  section.b-hero(style="background-image: url('images/hero.png')")
+  section.b-hero.webp-bg(style="background-image: url('images/hero.webp')",data-bg-fallback="images/hero.png")
     .container-xl
       .row
         .b-hero__content.col-md-7
@@ -67,7 +67,7 @@ block content
         .b-project.b-project--left.row
           .b-project__left-col
             .b-project__header
-              .b-project__image(style="background-image: url('images/balenciaga.png')", alt)
+              .b-project__image.webp-bg(style="background-image: url('images/balenciaga.webp')", data-bg-fallback="images/balenciaga.png", alt)
               .b-project__testimonial.testimonial
                 .testimonial__content.
                   “In my history of working with trade show vendors, I can honestly say that there is not one company that I've ever worked with that has better service than Exhibit Systems.”
@@ -103,7 +103,7 @@ block content
                 See Case Study
           .b-project__right-col
             .b-project__header
-              .b-project__image(style="background-image: url('images/3d.png')", alt)
+              .b-project__image.webp-bg(style="background-image: url('images/3d.webp')", data-bg-fallback="images/3d.png", alt)
               .b-project__testimonial.testimonial
                 .testimonial__content.
                   “I know they are going to be honest with me. I am not going to get a subpar product; I know it is going to be good. That is the number one advantage of working with Exhibit Systems.”
@@ -118,7 +118,7 @@ block content
         .b-project.b-project--left.row.h-mb-0
           .b-project__left-col.h-mb-0
             .b-project__header
-              .b-project__image(style="background-image: url('images/online-booking.png')", alt)
+              .b-project__image.webp-bg(style="background-image: url('images/online-booking.webp')", data-bg-fallback="images/online-booking.png", alt)
               .b-project__testimonial.testimonial
                 .testimonial__content.
                   “Exhibit Systems is not a provider. They are not a supplier. They are a partner with expertise in making trade shows effective.”

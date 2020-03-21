@@ -98,3 +98,10 @@ body {
   position: relative;
   z-index: 2;
 }
+
+.picture-responsive {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

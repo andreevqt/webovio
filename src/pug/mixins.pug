@@ -1,3 +1,9 @@
 mixin use(id, width, height, fill, stroke)
   svg(class!=attributes.class, width=width, height=height, fill=fill, stroke=stroke)
     use(xlink:href!=id)
+
+mixin webp(src, fallback, alt)
+  picture(class!=attributes.class)
+    source(srcset=src type="image/webp")
+    source(srcset=fallback, type=getImageType(fallback))
+    img(src=fallback, alt=alt)

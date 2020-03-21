@@ -40,4 +40,14 @@ $(() => {
       },
     ]
   })
+
+  // webp 
+  if (!Modernizr.webp) {
+    console.log("webp")
+    const webpBg = $(".webp-bg");
+    webpBg.each((index, elem) => {
+      const el = $(elem);
+      el.css("background-image", `url('${el.data("bg-fallback")}')`);
+    });
+  }
 })
