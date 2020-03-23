@@ -72,6 +72,7 @@
   }
 
   &--services {
+    position: relative;
     z-index: 2;
     #{$parent}__container {
       position: relative;
@@ -90,6 +91,9 @@
           bottom: -120px;
         }
       }
+    }
+    @include media-breakpoint-up(md) {
+      top: 220px;
     }
   }
 
@@ -119,5 +123,5 @@
     border-top: 1px solid rgba(#213842, 0.1);
   }
 
-  width: 100%;
+/*   width: 100%; */
 }

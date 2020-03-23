@@ -6,10 +6,10 @@ html(lang="en")
     include head
   body
     include ../../../images/sprite.svg
-    include header
     main.content-wrapper
+      include header
       block content
-    include footer
+      include footer
     block before_scripts
     include scripts
     block after_scripts

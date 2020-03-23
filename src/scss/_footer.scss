@@ -113,11 +113,11 @@
     font-size: 14px;
   }
 
-  &--mt {
+  /* &--mt {
     @include media-breakpoint-up(md) {
       margin-top: -220px;
     }
-  }
+  } */
 
   @include media-breakpoint-up(lg) {
     padding-top: 310px;
