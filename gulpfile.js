@@ -17,10 +17,13 @@ const svgSprite = require("gulp-svg-sprite");
 const webpack = require("webpack-stream");
 const webpackConfig = require("./webpack.config");
 const gulpZip = require("gulp-zip");
-const moment = require("moment");
 const argv = require("yargs").argv;
 const fs = require("fs");
 const childProcess = require("child_process");
+const gulpWebp = require("gulp-webp");
+const { getImageType } = require("./src/js/util/util");
+const gulpModernizr = require("gulp-modernizr");
+const modernizrConfig = require("./modernizr.config.json");
 
 const config = {
   // destination folder
@@ -80,9 +83,7 @@ const css = () => {
 }
 
 const js = () => {
-
   const dest = config.dist + "/js";
-
   const { mode } = argv;
 
   if (config.useWebpack) {
@@ -117,14 +118,35 @@ const js = () => {
 
 }
 
+const modernizr = () => {
+  return gulp
+    .src("src/js/**/*.js")
+    .pipe(gulpModernizr(modernizrConfig))
+    .pipe(
+      gulp.dest(config.dist + "/js")
+    );
+}
+
 const images = () => {
-  const dest = config.dist + "/images";
-  const images = gulp
-    .src(["./images/**/*", "!./images/**/*.gitignore"])
-    .pipe(gulp.dest(dest));
-  const icon = gulp.src("./favicon.png")
-    .pipe(gulp.dest(config.dist));
-  return merge(images, icon);
+  const filetypes = "{png,gif,jpg,jpeg,svg}";
+  return merge(
+    gulp
+      .src([`./images/**/*.${filetypes}`, `!./images/favicon`])
+      .pipe(gulp.dest(config.dist + "/images")),
+    // favicon
+    gulp
+      .src(`./images/favicon/*.${filetypes}`)
+      .pipe(gulp.dest(config.dist))
+  );
+}
+
+const webp = () => {
+  return gulp
+    .src('./images/**/*.{png,jpg,jpeg}')
+    .pipe(gulpWebp({
+      quality: 100
+    }))
+    .pipe(gulp.dest(config.dist + "/images"))
 }
 
 const vendor = () => {
@@ -170,7 +192,8 @@ const html = () => {
     .pipe(pug({
       pretty: true,
       data: {
-        fs
+        fs,
+        getImageType
       }
     }))
     .pipe(gulp.dest(dest))
@@ -250,7 +273,7 @@ const sprites = gulp.parallel(pngSprites, svgSprites);
 
 const build = gulp.series(
   clean,
-  gulp.parallel(vendor, images, sprites),
+  gulp.parallel(vendor, images, webp, modernizr, sprites),
   gulp.parallel(css, js, html)
 );
 
@@ -265,6 +288,9 @@ exports.zip = zip;
 
 // images
 exports.images = images;
+
+// webp
+exports.webp = webp
 
 // sprites 
 exports.sprites = sprites;
