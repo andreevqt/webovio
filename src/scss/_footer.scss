@@ -23,7 +23,7 @@
     }
   }
 
-  &__logo img{
+  &__logo img {
     width: auto;
     height: 20px;
     @include media-breakpoint-up(md) {
@@ -112,12 +112,6 @@
   &__copy {
     font-size: 14px;
   }
-
-  /* &--mt {
-    @include media-breakpoint-up(md) {
-      margin-top: -220px;
-    }
-  } */
 
   @include media-breakpoint-up(lg) {
     padding-top: 310px;
