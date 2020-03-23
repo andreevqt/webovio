@@ -93,7 +93,7 @@
       }
     }
     @include media-breakpoint-up(md) {
-      top: 220px;
+      margin-bottom: -220px;
     }
   }
 
