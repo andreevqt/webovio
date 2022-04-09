@@ -42,7 +42,7 @@
     "gulp-zip": "^5.0.1",
     "gulp.spritesmith": "^6.11.0",
     "merge-stream": "^2.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "node-sass": "^4.13.1",
     "slick-carousel": "^1.8.1",
     "through2": "^3.0.1",
